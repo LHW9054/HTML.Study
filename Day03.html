@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>30-div_span.html</h1>
+    <hr>
+
+    <p>
+        div : 화면 영역을 분리하기 위한 태그
+    </p>
+    <p>
+        span : 요소를 구분하기 위한태그, 줄바꿈이 없고, 내부 컨텐츠만큼 크기를 차지한다
+    </p>
+
+    <div style="background-color: lightpink;">1</div>
+    <div style="background-color: lightpink;">2</div>
+    <div style="background-color: lightpink;">3</div>
+
+    <span style="background-color: lightskyblue;">4</span>
+    <span style="background-color: lightskyblue;">5</span>
+    <span style="background-color: lightskyblue;">6</span>
+
+    <style>
+        .item{
+            background-color: lightgreen;
+        }
+    </style>
+    
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+
+<h1>02-selector.html</h1>
+    <hr>
+
+    <table id="selectorTable">
+        <thead>
+            <tr>
+                <th>선택자</th>
+                <th>예시</th>
+                <th>효과</th>
+            </tr>
+        </thead>        
+        <tbody>
+            <tr>
+                <td>태그 선택자</td>
+                <td class="tag">div</td>
+                <td>지정한 태그에 해당하는 모든 요소를 선택한다</td>
+            </tr>
+            <tr>
+                <td>id 선택자</td>
+                <td class="tag">#table</td>
+                <td>지정한 id에 해당하는 요소 하나를 선택한다</td>
+            </tr>
+            <tr>
+                <td>class 선택자</td>
+                <td class="tag">.item</td>
+                <td>지정한 class에 해당하는 모든 요소를 선택한다</td>
+            </tr>
+            <tr>
+                <td>자손 선택자</td>
+                <td class="tag">A > B</td>
+                <td>A요소 바로 하위에 포함된 B요소들을 모두 선택한다</td>
+            </tr>
+            <tr>
+                <td>후손 선택자</td>
+                <td class="tag">A B</td>
+                <td>A요소 하위의 모든 계층에 포함된 B요소들을 모두 선택한다</td>
+            </tr>
+        </tbody>
+    </table>
+ <h1>border.html</h1>
+    <hr>
+
+    <table>
+        <tr>
+            <td>margin</td>
+            <td>테두리 바깥쪽 여백</td>
+        </tr>
+        <tr>
+            <td>border</td>
+            <td>테두리</td>
+        </tr>
+        <tr>
+            <td>padding</td>
+            <td>테두리 안쪽여백</td>
+        </tr>
+    </table>
+
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        #item1{
+            margin : 10px auto;
+            border: 2px solid black;
+            padding: 10px;
+        }
+        #item2{
+            margin : 10px auto;
+            border: 3px solid red;
+            padding: 20px 40px;
+        }
+    </style>
+
+    <div id="item1">item1</div>
+    <div id="item2">item2</div>
+ <h1>04-box.html</h1>
+    <hr>
+
+    <div id="wrap">
+        <div class="row">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+        <div class="row">
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+        <div class="row">
+            <div class="box">7</div>
+            <div class="box">8</div>
+            <div class="box">9</div>
+        </div>
+    </div>
+  <h1>05-menubar.html</h1>
+    <hr>
+
+    <div id="nav">
+        <ul>
+            <li>홈</li>
+            <li>통함 DB메인</li>
+            <li>정복자 시뮬레이터</li>
+            <li>스킬 시뮬레이터</li>
+            <li>지도</li>
+            <li>위상</li>
+            <li>아이템</li>
+        </ul>
+    </div>
+<div id="header" class="frame">
+        <h3>상단</h3>
+    </div>
+
+    <div id="main" class="frame">
+        <div id="aside">
+            <h3>왼쪽 메뉴</h3>
+        </div>
+        <div id="section">
+            <h3>가운데 중심 내용</h3>
+        </div>
+    </div>
+
+    <div id="footer" class="frame">
+        <h3>하단</h3>
+    </div>
+    <h1>07-background.html</h1>ㄴ
+    <hr>
+
+    <div class="flex">
+
+        <div class="item" style="background-image: url(image/danbi.jpg);">
+            <p>단비꺼야</p>
+        </div>
+        
+        <div class="item" style="background-image: url('image/calmdownman.jpg');"></div>
+        <div class="item" style="background-image: url('image/jisoo.png');"></div>
+        <div class="item" style="background-image: url('image/iu.jpg');"></div>
+        <div class="item" style="background-image: url('image/dora.png');"></div>
+    </div>
+</body>
+</html>
