@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>01-hover.html</h1>
+    <hr>
+
+    <h3>
+        선택자에 특수상황이나 조건을 지정할 수 있다<br>
+        hover는 요소에 마우스를 올렸을 때 반응하는 선택자이다.
+    </h3>
+
+    <ul>
+        <li>버튼1</li>
+        <li>버튼2</li>
+        <li>버튼3</li>
+        <li>버튼4</li>
+        <li>버튼5</li>
+    </ul>
+<h1>02-flex.html</h1>
+    <hr>
+
+    <div id="flex">
+        <div class="item"></div>
+        <div class="main"></div>
+        <div class="cross"></div>
+    </div>
+
+    <div id="control">
+        <ul>
+            <h3>justify-content (main-axis)</h3>
+            <li>
+                <label>
+                    <input type="radio" name="main" value="flex-start" 
+                           checked="checked">
+                    flex-start
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="main" value="center">
+                    center
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="main" value="flex-end">
+                    flex-end
+                </label>
+            </li>
+        </ul>
+
+        <ul>
+            <h3>align-items (cross-axis)</h3>
+            <li>
+                <label>
+                    <input type="radio" name="cross" value="flex-start"
+                           checked>
+                    flex-start
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="cross" value="center">
+                    center
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="cross" value="flex-end">
+                    flex-end
+                </label>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        const mainList = document.querySelectorAll('#control > ul:first-child input')
+        const crossList = document.querySelectorAll('#control > ul:last-child input')
+        const flex = document.getElementById('flex')
+
+        mainList.forEach(e => {
+            e.onclick = function(event) {
+                const v = event.target.value
+                flex.style.justifyContent = v
+            }
+        })
+
+        crossList.forEach(e => {
+            e.onclick = function(event) {
+                const v = event.target.value
+                flex.style.alignItems = v
+            }
+        })
+    </script>
+
+    <h1>03-flex.html</h1>
+    <hr>
+
+    <div id="header">
+        <h2>TITLE</h2>
+    </div>
+
+    <div id="main">
+        <div id="nav">
+            <ul>
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+            </ul>
+        </div>
+        <div id="content">
+            <h3>Hello World</h3>
+        </div>
+    </div>
+<h1>04-justify-content.html</h1>
+    <hr>
+
+    <div class="box" style="justify-content: flex-start;">
+        <div class="item item1"></div>
+        <div class="item item2"></div>
+        <div class="item item3"></div>
+    </div>
+
+    <div class="box" style="justify-content: center;">
+        <div class="item item1"></div>
+        <div class="item item2"></div>
+        <div class="item item3"></div>
+    </div>
+
+    <div class="box" style="justify-content: flex-end;">
+        <div class="item item1"></div>
+        <div class="item item2"></div>
+        <div class="item item3"></div>
+    </div>
+
+    <div class="box" style="justify-content: space-between;">
+        <div class="item item1"></div>
+        <div class="item item2"></div>
+        <div class="item item3"></div>
+    </div>
+
+    <div class="box" style="justify-content: space-around;">
+        <div class="item item1"></div>
+        <div class="item item2"></div>
+        <div class="item item3"></div>
+    </div>
+
+    <div class="box" style="justify-content: space-evenly;">
+        <div class="item item1"></div>
+        <div class="item item2"></div>
+        <div class="item item3"></div>
+    </div>
+
+
+    <div class="box" style="flex-flow: wrap;
+                            justify-content: center;">
+        <div class="item item1"></div>
+        <div class="item item2"></div>
+        <div class="item item3"></div>
+        <div class="item item1"></div>
+        <div class="item item2"></div>
+        <div class="item item3"></div>
+        <div class="item item1"></div>
+        <div class="item item2"></div>
+        <div class="item item3"></div>
+    </div>
+<h1>05-position.html</h1>
+    <hr>
+
+    <table border="1" cellpadding="10" cellspacing="0" align="center">
+
+        <tr>
+            <th>속성</th>
+            <th>기능</th>
+        </tr>
+        <tr>
+            <th>static</th>
+            <th>기본값, 별도의 위치를 지정하지 않고 흐름에 맞게 배치한다.</th>
+        </tr>
+        <tr>
+            <th>relative</th>
+            <th>다른요소의 위치 기준이 될수 있다. 흐름에 맞게 배치한다</th>
+        </tr>
+        <tr>
+            <th>absolute</th>
+            <th>기준을 중심으로 자신만의 위치를 가진다. 스크롤의 영향은 받는다</th>
+        </tr>
+        <tr>
+            <th>fixed</th>
+            <th>기준을 중심으로 자신만의 위치를 가진다. 스크롤의 영향을 받지 않는다</th>
+        </tr>
+        <tr>
+            <th>sticky</th>
+            <th>평소에는 relative처럼 배치되지만, 기준점에 도달하면 fixed와 같다</th>
+        </tr>
+    </table>
+
+    <fieldset>
+        <legend>static</legend>
+        <img src="image/danbi.jpg" 
+            style="top : 20px;
+                    left: 20px;
+                    position:static;"
+                height="100">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias veritatis quidem odio, quaerat assumenda hic reiciendis error minima est dolor voluptatum harum ratione praesentium corrupti perspiciatis numquam similique eum suscipit?
+    </fieldset>
+
+    <fieldset>
+        <legend>relative</legend>
+        <img src="image/danbi.jpg" 
+            style="top : 20px;
+                    left: 20px;
+                    position:relative;"
+                height="100">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias veritatis quidem odio, quaerat assumenda hic reiciendis error minima est dolor voluptatum harum ratione praesentium corrupti perspiciatis numquam similique eum suscipit?
+    </fieldset>
+    
+    <fieldset style="position: relative;">
+        <legend>absolute</legend>
+        <img src="image/danbi.jpg" 
+            style="top : 20px;
+                    left: 20px;
+                    position:absolute;"
+                height="100">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias veritatis quidem odio, quaerat assumenda hic reiciendis error minima est dolor voluptatum harum ratione praesentium corrupti perspiciatis numquam similique eum suscipit?
+        부모요소에 STATIC이 아닌 포지션값을 가지고 있으면은 해당 포지션으로 간다
+    </fieldset>
+
+    <fieldset style="position: relative;">
+        <legend>fixed</legend>
+        <img src="image/danbi.jpg" 
+            style="top : 20px;
+                    left: 20px;
+                    position:fixed;"
+                height="100">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias veritatis quidem odio, quaerat assumenda hic reiciendis error minima est dolor voluptatum harum ratione praesentium corrupti perspiciatis numquam similique eum suscipit?
+    </fieldset>
+
+    <fieldset style="position: relative;">
+        <legend>sticky</legend>
+        <img src="image/calmdownman.jpg" 
+            style="top : 400px;
+                    left: 300px;
+                    position:sticky;"
+                height="100">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias veritatis quidem odio, quaerat assumenda hic reiciendis error minima est dolor voluptatum harum ratione praesentium corrupti perspiciatis numquam similique eum suscipit?
+    </fieldset>
+
+    <div style="width: 90%; height: 95vh;"></div>
+<div id="header">
+        <h1>06-position.html</h1>
+    </div>
+    <div id="nav">
+        <ul>
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+            <li><a href="#">menu5</a></li>
+        </ul>
+    </div>
+
+    <div id="main">
+        <img src="image/calmdownman.jpg"><br><br>
+        <img src="image/danbi.jpg"><br><br>
+        <img src="image/dora.png"><br><br>
+        <img src="image/head_body.jpg"><br><br>
+        <img src="image/iu.jpg"><br><br>
+        <img src="image/jisoo.png"><br><br>
+        <img src="image/kong.jpg"><br><br>
+    </div>
+    
+    <div id="remocon">
+        <div><a href="#header">🔺</a></div>
+        <div><a href="#footer">🔻</a></div>
+    </div>
+
+    <div id="footer"></div>
+<h1>07-float.html</h1>
+    <hr>
+
+    <fieldset>
+        <img src="image/흰둥이.png" width="100">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita vero neque, possimus nobis facilis nesciunt minus excepturi et hic dolorum? Asperiores nobis omnis atque, ullam tempore numquam inventore odit excepturi?
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <img src="image/흰둥이.png" width="100" style="float: left;">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita vero neque, possimus nobis facilis nesciunt minus excepturi et hic dolorum? Asperiores nobis omnis atque, ullam tempore numquam inventore odit excepturi?
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <img src="image/흰둥이.png" width="100" style="float: right;">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita vero neque, possimus nobis facilis nesciunt minus excepturi et hic dolorum? Asperiores nobis omnis atque, ullam tempore numquam inventore odit excepturi?
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <img src="image/흰둥이.png" width="100" style="clear: both;">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita vero neque, possimus nobis facilis nesciunt minus excepturi et hic dolorum? Asperiores nobis omnis atque, ullam tempore numquam inventore odit excepturi?
+    </fieldset>
+    <br>
+ <h1>08-z-index.html</h1>
+    <hr>
+
+    <div class="box">
+        <div style="z-index: 1;" class="red"></div>
+        <div style="z-index: 0;" class="blue"></div>
+    </div>
+
+    <div class="box">
+        <div style="z-index: 2;" class="red"></div>
+        <div style="z-index: 3;" class="blue"></div>
+    </div>
+<h1>09-display.html</h1>
+    <hr>
+
+    <table border="1" cellpadding="10" cellspacing="0" align="center">
+        <tr>
+            <th>display 값</th>
+            <th>특징</th>
+        </tr>
+        <tr>
+            <td>inline</td>
+            <td>content만큼의 크기를 차지한다. width, height를 적용할 수 없다</td>
+        </tr>
+        <tr>
+            <td>block</td>
+            <td>한 줄을 혼자서 차지한다. width, height를 적용할 수 있다</td>
+        </tr>
+        <tr>
+            <td>inline-block</td>
+            <td>inline처럼 한줄에 여러요소를 배치할수 있고, 크기를 지정할 수 있다</td>
+        </tr>
+        <tr>
+            <td>flex</td>
+            <td>내부 요소를 일정한 기준에 따라 정렬한다</td>
+        </tr>
+        <tr>
+            <td>none</td>
+            <td>요소가 화면에서 사라진다. 자리차지도 없다</td>
+        </tr>
+    </table>
+
+    <br>
+    <fieldset>
+        <div style="display: inline;" class="item">inline</div>
+        <div style="display: inline;" class="item">inline</div>
+        <div style="display: inline;" class="item">inline</div>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <div style="display: block;" class="item">block</div>
+        <div style="display: block;" class="item">block</div>
+        <div style="display: block;" class="item">block</div>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <div style="display: inline-block;" class="item">inline-block</div>
+        <div style="display: inline-block;" class="item">inline-block</div>
+        <div style="display: inline-block;" class="item">inline-block</div>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <legend>display: none</legend>
+        <div style="display: block;" class="item">1</div>
+        <div style="display: none;" class="item">2</div>
+        <div style="display: block;" class="item">3</div>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <legend>visivility: hidden</legend>
+        <div style="visibility: visible;" class="item">1</div>
+        <div style="visibility: hidden;" class="item">2</div>
+        <div style="visibility: visible;" class="item">3</div>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <legend>opacity: 0</legend>
+        <div style="opacity: 1;" class="item">1</div>
+        <div style="opacity: 0;" class="item">2</div>
+        <div style="opacity: 1;" class="item">3</div>
+    </fieldset>
+    <br>
+</body>
+</html>
