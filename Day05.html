@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    
+    <h1>01-calculator.html</h1>
+    <hr>
+
+    <div id="root">
+        <div id="sample">
+            <img src="계산기.jpg">
+        </div>
+        <div id="calc">
+            <div class="top sb">
+                <div class="">📱계산기</div>
+                <div class="flex">
+                    <div>_</div>
+                    <div>ㅁ</div>
+                    <div>⨉</div>
+                </div>
+            </div>
+
+            <div class="mode sb">
+                <div class="">≡ 표준 ♐</div>
+                <div class="">🔄</div>
+            </div>
+
+            <div class="input">0</div>
+
+            <div class="mbtns sb">
+                <div>MC</div>
+                <div>MR</div>
+                <div>M+</div>
+                <div>M-</div>
+                <div>MS</div>
+                <div>M∨</div>
+            </div>
+
+            <div class="btns">
+                <div>%</div>
+                <div>CE</div>
+                <div>C</div>
+                <div>←</div>
+                <div>1/x</div>
+                <div>x<sup>2</sup></div>
+                <div><sup>2</sup>√x</div>
+                <div>÷</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>×</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>-</div>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>+</div>
+                <div>+/-</div>
+                <div>0</div>
+                <div>.</div>
+                <div>=</div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+<h1>02-input.html</h1>
+    <hr>
+
+    <h3>사용자의 입력밧을 서버에 전송하기 위한 요소. form과 연계하여 사용한다.</h3>
+
+    <table>
+        <tr>
+            <th>태그</th>
+            <th>type</th>
+            <th>특징</th>
+            <th>예시</th>
+
+        </tr>
+        <tr>
+            <td rowspan="10">input</td>
+            <td>text</td>
+            <td>일반적인 텍스트를 입력받는다.</td>
+            <td><input type="text" placeholder="글자 입력"></td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td>마스킹된 텍스트를 입력받는다</td>
+            <td><input type="password" placeholder="비밀번호 입력"></td>
+        </tr>
+        <tr>
+            <td>number</td>
+            <td>숫자를 입력받는다</td>
+            <td><input type="number" placeholder="숫자 입력"></td>
+        </tr>
+        <tr>
+            <td>date</td>
+            <td>날짜를 입력받는다</td>
+            <td><input type="date"></td>
+        </tr>
+        <tr>
+            <td>range</td>
+            <td>마우스로 범위사이의 숫자를 입력받는다</td>
+            <td><input type="range"></td>
+        </tr>
+        <tr>
+            <td>file</td>
+            <td>사용자의 첨부파일을 입력받는다</td>
+            <td><input type="file"></td>
+        </tr>
+        <tr>
+            <td>radio</td>
+            <td>여러요소 중 하나를 선택하여 입력받는다</td>
+            <td>
+                <label><input type="radio" name="adult" value="true">성인</label>
+                <label><input type="radio" name="adult" value="true">미성년자</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>checkbox</td>
+            <td>여러 요소중 해당하는 값을 복수 선택하여 입력받는다</td>
+            <td>
+                <label><input type="checkbox" name="pet_type" value="dog">강아지</label>
+                <label><input type="checkbox" name="pet_type" value="cat">고양이</label>
+                <label><input type="checkbox" name="pet_type" value="turtle">거북이</label>
+            </td>
+        </tr>
+        <tr>
+            <td>hidden</td>
+            <td>이름과 값이 정해져 있으나, 시각적으로 보이지 않는다(display: none)</td>
+            <td>
+                <input type="hidden" name="csrf_token" value="abcdefghi">
+            </td>
+        </tr>
+
+        <tr>
+            <td>color</td>
+            <td>색상값을 입력받는다</td>
+            <td>
+                <input type="color">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">select</td>
+            <td>여러 선택지 중 하나를 입력 받는다 (radio 와 방식이 유사하다)</td>
+            <td>
+                <select name="" id="">
+                    <option value="">=== 언어를 선택하세요 ===</option>
+                    <option value="korea">한글</option>
+                    <option value="china">中文</option>
+                    <option value="japan">日本語</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">textarea</td>
+            <td>여러 줄로 구성된 텍스트를 입력받는다</td>
+            <td>
+                <textarea name="content" placeholder="내용을 입력하세요"></textarea>
+            </td>
+        </tr>
+
+
+
+
+
+    </table>
+<h1>03-search.html</h1>
+    <hr>
+
+    <form action="https://search.naver.com/search.naver">
+        <select name="where">
+            <option value="nexearch">통합검색</option>
+            <option value="image">이미지</option>
+            <option value="news">뉴스</option>
+            <option value="video">동영상</option>
+        </select>
+        <input type="search" name="query" placeholder="네이버 검색" required autofocus>
+        <input type="submit" value="검색">
+    </form>
+<h1>04.google-search.html</h1>
+    <hr>
+    
+    <form action="http://google.com/search">
+        <input type="text" name="q" placeholder="구글 검색">
+        <input type="submit" value="검색">
+    </form>
+<h1>05-input-css.html</h1>
+    <hr>
+
+    <table>
+        <tr>
+            <td>
+                📈<input type="text" name="text1">
+            </td>
+            <td>
+                input을 선택하여 포커스를 받고있는 중이면 적용되는 스타일
+            </td>
+        </tr>
+        <tr>
+            <td><input type="text" name="test2" placeholder="검색"></td>
+            <td>focus중일대만 커지는 input</td>
+        </tr>
+    </table>
+<div id="header">
+        <h1>NAVER</h1>
+        <select id="lang" name="lang">
+            <option value="ko">한국어</option>
+            <option value="en">English</option>
+            <option value="cn">中文</option>
+        </select>
+    </div>
+
+    <div id="main">
+        <ul>
+            <li class="menu-id">ID로그인</li>
+            <li class="menu-num">일회용번호</li>
+            <li class="menu-qr">QR코드</li>
+        </ul>
+        <div id="content">
+            <div class="input">
+                👨‍💼
+                <input type="text" name="id" placeholder="아이디"
+                       autocomplete="off">
+            </div>
+            <div class="input">
+                🔒
+                <input type="password" name="pw" placeholder="비밀번호">
+            </div>
+            <div class="sb">
+                <div>
+                    <input type="checkbox">로그인 상태 유지
+                </div>
+                <div class="ipsec">
+                    IP보안<input type="range" min="0" max="1">
+                </div>
+            </div>
+            <button>로그인</button>
+        </div>
+    </div>
+
+    <div id="banner">
+        <img src="https://ssl.pstatic.net/melona/libs/1378/1378592/8882ffe2fdce5d0414fb_20230705161628363.jpg"
+             width="100%">
+    </div>
+
+    <div id="footer">
+        <ul>
+            <li>이용약관</li>
+            <li>개인정보처리방침</li>
+            <li>책임의 한계와 법적고지</li>
+            <li>회원정보 고객센터</li>
+        </ul>
+    </div>
+
+
+
+</body>
+</html>
