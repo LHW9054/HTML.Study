@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    
+    ⭐️ <h1>01.html.html</h1>
+    <hr>
+
+    <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>종류</th>
+            <th>예시</th>
+            <th>특징</th>
+        </tr>        
+
+        <tr>
+            <td>글자 표현을 위한 태그</td>
+            <td>h1 ~ h6, p, span, b, i, u, strong ...</td>
+            <td>텍스트의 중요도 및 강조 표현</td>
+        </tr>
+
+        <tr>
+            <td>영역태그</td>
+            <td>div, span, fieldset, details ...</td>
+            <td>페이지 상에서의 영역을 분리하기 위한 태그</td>
+        </tr>
+
+        <tr>
+            <td>입력 태그</td>
+            <td>input, select, textarea, form...</td>
+            <td>사용자의 입력을 서버에 전송하기 위한 태그</td>
+        </tr>
+
+        <tr>
+            <td>멀티미디어 리소스 관련 태그</td>
+            <td>img, video, iframe(youtube) ...</td>
+            <td>글자가 아닌 요소를 나타내기 위한 태그</td>
+        </tr>
+
+        <tr>
+            <td>다중 데이터 나열</td>
+            <td>ul, ol, li, table ...</td>
+            <td>여러 데이터를 일정한 규칙에 따라 나열하기 위한 태그</td>
+        </tr>
+
+    </table>
+
+<h1>02-style.html</h1>
+    <hr>
+
+    <div style="position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        background-color: rgba(255, 0, 0, 0);
+        border-radius: 100px 10px 10px 10px;
+        z-index:1;">
+    </div>
+
+    <table border="1" cellpadding="10" cellspacing="0">
+
+        <tr>
+            <th colspan="2">단위</th>
+        </tr>
+        <tr>
+            <td>크기</td>
+            <td>
+                <ul>
+                    <li>% : 백분율</li>
+                    <li>em : 배수</li>
+                    <li>px : 픽셀</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>색상</td>
+            <td>
+                <ul>
+                    <li>HEX : #000000</li>
+                    <li>
+                        rgb : rbg(255, 128, 0)<br>
+                        red, green, blue
+                    </li>
+                    <li>
+                        rgba : rgba(255,255,192,0.5)<br>
+                        red, green, blue, alpha
+                    </li>
+                    <li>colorName : lightgreen</li>
+                </ul>
+            </td>
+        </tr>
+
+        <tr>
+            <th colspan="2">가시 속성</th>
+        </tr>
+        <tr>
+            <td>display</td>
+            <td>화면에 보이는 형태지정</td>
+        </tr>
+        <tr>
+            <td>visivility</td>
+            <td>보이거나 보이지 않거나</td>
+        </tr>
+        <tr>
+            <td>opacity</td>
+            <td>투명도 조절</td>
+        </tr>
+        <tr>
+            <th colspan="2">박스속성</th>
+        </tr>
+        <tr>
+            <td>width, height</td>
+            <td>영역의 어비와 높이를 지정</td>
+        </tr>
+        <tr>
+            <td>margin, padding</td>
+            <td>테두리 바깥 여백, 테두리 안쪽 여백<br>
+                10px (all)<br>
+                10px auto (top-bottom, left-right)<br>
+                10px 5px 5px 10px (top, right, bottom, right)<br>
+            </td>
+        </tr>
+        <tr>
+            <td>box-sizing</td>
+            <td>
+                center-box : 영역의 크기는 가운데만 적용<br>
+                border-box : 테두리를 포함한 영역을 적용
+            </td>
+        </tr>
+
+        <tr>
+            <th colspan="2">테두리 속성</th>
+        </tr>
+        <tr>
+            <td>border: 두께 유형 색상</td>
+            <td>테두리를 지정</td>
+        </tr>
+        <tr>
+            <td>border-radius</td>
+            <td>테두리의 둥글기를 지정<br>
+                margin, padding과 같은 방식으로 상하좌우 지정가능
+            </td>
+        </tr>
+
+    </table>
+ <h1>03-style.html</h1>
+    <hr>
+
+    <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <td>종류</td>
+            <td>설명</td>
+        </tr>
+        <tr>
+            <td>background-image</td>
+            <td>배경에 넣을 그림 지정, url()로 입력</td>
+        </tr>
+        <tr>
+            <td>background-size</td>
+            <td>배경 그림 크기 지정</td>
+        </tr>
+        <tr>
+            <td>background-repeat</td>
+            <td>그림 반복 여부 지정</td>
+        </tr>
+        <tr>
+            <td>background-repeat</td>
+            <td>그림의 위치 지정</td>
+        </tr>
+    </table>
+
+    <fieldset style="display: flex;">
+        <div style="background-image: url(image/danbi.jpg);
+            width: 100px;
+            height: 100px"></div>
+        <div>
+            배경그림만 지정함. 크기 및 위치, 반복 지정 안함
+        </div>
+
+    </fieldset>
+    <br>
+    <fieldset style="display: flex;">
+        <div style="background-image: url('image/짱구.png')
+                                     ,url('image/heos.gif');
+                        background-repeat: repeat-x;
+                        background-size: 100px;
+                        background-position: top, bottom;
+                        width: 300px;
+                        height: 300px"></div>
+        <div>
+            배경 그림 2개 지정하기<br>
+            반복 옵션 : 가로로만 반복<br>
+            각 그림의 위치 : 첫번째 그림이 top, 두번째 그림이 bottom
+        </div>
+    </fieldset>
+    <br>
+    <fieldset style="display: flex;">
+        <div style="background-image: url('image/짱구.png')
+                                     ,url('image/heos.gif');
+                        background-repeat: repeat-x;
+                        background-size: 100px;
+                        /* background-position: top, bottom; */
+                        width: 300px;
+                        height: 300px"></div>
+        <div>
+            배경 그림 2개 지정하기<br>
+            반복 옵션 : 가로로만 반복<br>
+            각 그림의 위치 : 첫번째 그림이 top, 두번째 그림이 bottom
+        </div>
+    </fieldset>
+    <br>
+    <fieldset style="display: flex;">
+        <div style="background-image: url('image/짱구.png')
+                                     ,url('image/heos.gif');
+                        background-repeat: no-repeat;
+                        background-size: 100px, 100%;
+                        background-position: center;
+                        width: 300px;
+                        height: 300px"></div>
+        <div>
+            배경 그림 2개 지정하기<br>
+            반복 옵션 : 반복안함<br>
+            각 그림의 위치 : 첫번째는 100px, 두번째는100%<br>
+            그림위치 : 가운데
+        </div>
+    </fieldset>
+    <br>
+
+  <h1>04-font-style.html</h1>
+    <hr>
+
+    <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <td>font-size</td>
+            <td>글자 크기 지정, px, pt, em, rem</td>
+        </tr>
+        <tr>
+            <td>font-family</td>
+            <td>글꼴, 클라이언트 컴퓨터에 설치되어 있어야 한다.</td>
+        </tr>
+        <tr>
+            <td>font-weight</td>
+            <td>글자 두께</td>
+        </tr>
+
+        <tr>
+            <td>line-weight</td>
+            <td>문장 한줄의 높이 지정</td>
+        </tr>
+        <tr>
+            <td>text-align</td>
+            <td>글자의 (좌우) 정렬을 지정</td>
+        </tr>
+        <tr>
+            <td>text-decoration</td>
+            <td>글자의 꾸밈 요소 (주로 a태그의 밑줄)</td>
+        </tr>
+    </table>
+
+    <fieldset>
+        <legend>font-size</legend>
+        <ul>
+            <li style="font-size: 2em;">Hello, World (2em)</li>
+            <li style="font-size: 1.5rem;">Hello, World (1.5rem)</li>
+            <li style="font-size: 20px;">Hello, World (20px)</li>
+            <li style="font-size: 20pt;">Hello, World (20pt)</li>
+        </ul>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>font-family</legend>
+        <ul>
+            <li style="font-family: 'consolas';">Hello, World</li>
+            <li style="font-family: 'comic sans ms';">Hello, World</li>
+            <li style="font-family: 'impact';">Hello, World</li>
+            <li style="font-family: 'times new roman';">Hello, World</li>
+            <li style="font-family: 'sans-serif';">Hello, World</li>
+            <li style="font-family: '궁서체';">Hello, World</li>
+            <li style="font-family: '필기';">Hello, World</li>
+            <li style="font-family: '필기', 'impact';">Hello, World</li>
+        </ul>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>font-weight</legend>
+        <ul>
+            <li style="font-weight: 100;">Hello, World</li>
+            <li style="font-weight: 200;">Hello, World</li>
+            <li style="font-weight: 300;">Hello, World</li>
+            <li style="font-weight: 400;">Hello, World</li>
+            <li style="font-weight: 500;">Hello, World</li>
+            <li style="font-weight: bold;">Hello, World</li>
+            <li style="font-weight: bolder;">Hello, World</li>
+        </ul>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>line-height</legend>
+        <ul>
+            <li style="line-height: 16px;">line height: 16px</li>
+            <li style="line-height: 20px;">line height: 20px</li>
+            <li style="line-height: 30px;">line height: 30px</li>
+            <li style="line-height: 40px;">line height: 40px</li>
+        </ul>
+    </fieldset>
+    <br>
+    
+    <fieldset>
+        <legend>text-align</legend>
+        <ul>
+            <li style="text-align: left;">text-align: left</li>
+            <li style="text-align: center;">text-align: center</li>
+            <li style="text-align: right;">text-align: right</li>
+        </ul>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <legend>text-decoration</legend>
+        <ul>
+            <li style="text-decoration: underline;">text-decoration: underline</li>
+            <br>
+            <li style="text-decoration: wavy;">text-decoration: wavy</li>
+            <br>
+            <li style="text-decoration: overline;">text-decoration: overline</li>
+            <br>
+            <li style="text-decoration: line-through;">text-decoration: line-through</li>
+        </ul>
+        <br>
+        <a href="http://www.naver.com">네이버</a>
+        <br>
+        <a style="text-decoration: none;" href="http://www.naver.com">네이버</a>
+    </fieldset>
+    <br>
+
+    <div class="test">
+        <p>Hello, World!!</p>
+        <input type="number" min1="1" max="400" step="1">
+    </div>
+
+    <script>
+        const p = document.querySelector('.test > p')
+        const size = document.querySelector('.test > input')
+
+        size.onchange = function() {
+            p.style.fontSize = size.value + 'px'
+        }
+    </script>
+<h1>05-overflow.html</h1>
+    <hr>
+
+    <table border="1" cellpadding="10" cellspacing="0">
+        
+        <tr>
+            <td>overflow: auto</td>
+            <td>내용에 따라서 스크롤바가 생길수도 있고 없을 수도 있다.</td>
+        </tr>
+        <tr>
+            <td>overflow: hidden</td>
+            <td>범위를 벗어나는 내용은 숨긴다. 스크롤바는 강제로 사라진다.</td>
+        </tr>
+        <tr>
+            <td>overflow: scroll</td>
+            <td>내용에 상관없이 항상 스크롤바를 표시한다.</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                overflow: 내용이 영역을 벗어날 경우의 처리방식을 결정<br>
+                overflow-x: 내용이 가로영역을 벗어날 경우의 처리방식을 결정<br>
+                overflow-y: 내용이 세로영역을 벗어날 경우의 처리방식을 결정<br>
+            </td>
+        </tr>
+    </table>
+    <br>
+
+    <fieldset style="overflow: hidden; width: 300px; height: 120px;">
+        <legend><b>overflow: hidden</b></legend>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit eos tenetur inventore ducimus tempora distinctio at esse eveniet atque, deserunt ut fuga sapiente modi repudiandae debitis libero dolor provident corrupti.
+    </fieldset>
+    <br>
+
+    <fieldset style="overflow: auto; width: 300px; height: 120px;">
+        <legend><b>overflow: auto</b></legend>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit eos tenetur inventore ducimus tempora distinctio at esse eveniet atque, deserunt ut fuga sapiente modi repudiandae debitis libero dolor provident corrupti.
+    </fieldset>
+    <br>
+    
+    <fieldset style="overflow: scroll; width: 300px; height: 120px;">
+        <legend><b>overflow: scroll</b></legend>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit eos tenetur inventore ducimus tempora distinctio at esse eveniet atque, deserunt ut fuga sapiente modi repudiandae debitis libero dolor provident corrupti.
+    </fieldset>
+    <br>
+ 
+    <h1>06-webfont.html</h1>
+    <hr>
+
+    <h2 class="square">Hello, World</h2>
+    <h2 class="google">Hello, World</h2>
+    <h2 class="google2">Hello, World</h2>
+
+    <h3>square는 본인의 컴퓨터에 설치가 되어있어야만 적용이 된다.</h3>
+    <h3>google과 google2는 컴퓨터에 설치되지 않아도 웹에서 다운로드 받아서 적용된다.</h3>
+<h1>07-em_rem.html</h1>
+    <hr>
+
+    <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <td>em</td>
+            <td>현재 element의 font-size 속성값을 기준으로 하는 배수</td>
+        </tr>
+        <tr>
+            <td>rem (root em)</td>
+            <td>최상위 요소(html)의 font-size 속성값을 기준으로 하는 배수</td>
+        </tr>
+    </table>
+
+    <style>
+        .box {
+            width: 10em;
+            height: 10em;
+            background-color: lightskyblue;
+        }
+        .flex {
+            display: flex;
+        }
+    </style>
+
+    <fieldset style="font-size: 16px;">
+        <legend><b>font-size: 16px, width, height: 10em</b></legend>
+        <div class="flex">
+            <div class="box"></div>
+            <div style="width: 160px; height: 160px; background-color: red;"></div>
+        </div>
+    </fieldset>
+
+    <fieldset style="font-size: 20px;">
+        <legend>font-size: 20px</legend>
+        <div class="flex">
+            <div class="box"></div>
+            <div style="width: 200px; height: 200px; background-color: red;"></div>
+        </div>
+    </fieldset>
+
+    <hr>
+    <style>
+        .box2 {
+            width: 10rem;
+            height: 10rem;
+            background-color: salmon;
+        }
+    </style>
+    
+    <fieldset style="font-size: 20px;">
+        <legend><b>font-size: 20px, width, height: 10rem;</b></legend>
+        <div class="flex">
+            <div class="box2"></div>
+            <div style="width: 160px; height: 160px; background-color: red;"></div>
+        </div>
+    </fieldset>
+
+    <hr>
+
+    <style>
+        html {
+            font-size: 14px;
+        }
+        .box3 {
+            width: 10rem;
+            height: 10rem;
+            background-color: lightgreen;
+        }
+    </style>
+    <fieldset style="font-size: 20px;">
+        <legend><b>font-size: 20px, width, height: 10rem;</b></legend>
+        <div class="flex">
+            <div class="box3"></div>
+            <div style="width: 140px; height: 140px; background-color: red;"></div>
+        </div>
+    </fieldset>
+<h1>08-Quiz.html</h1>
+    <hr>
+  
+
+
+    <div id="head">
+        
+        <div class="left">
+            <div>LOGIN</div>
+            <div>JOIN</div>
+            <div>CART0️⃣</div>
+            <div>ORDER |</div>
+            <div><b>MY PAGE |</b></div>
+            <div><b>BOOKMARK</b></div>
+        </div>
+            
+        <div class="right">
+            <div>공지사항</div>
+            <div>이벤트</div>
+            <div>상품문의</div>
+            <div>상품추가</div>
+        </div>
+
+    </div>
+    <hr>
+
+    <div id="LOGO">
+        <b>D'ARLES</b>
+    </div>
+
+    <div id="sns">
+        <img src="image/facebook.jpg">
+        <img src="image/인스타.png">
+        <img src="image/유튜브.png">
+    </div>
+
+    <hr>
+    <div id="menu">
+        <div><b>三</b></div>
+        <div><b>RONA universe</b></div>
+        <div><b>남성의류</b></div>
+        <div><b>아우터</b></div>
+        <div><b>탑</b></div>
+        <div><b>드레스</b></div>
+        <div><b>바텀</b></div>
+        <div><b>악세서리</b></div>
+    </div>
+    <hr>
+
+
+</body>
+</html>
