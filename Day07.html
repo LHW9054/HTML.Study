@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>01-selector.html</h1>
+    <hr>
+
+    <div id="root">
+        <div class="row">
+            <div class="data">선택자</div>
+            <div class="data">형태</div>
+            <div class="data">예시</div>
+        </div>
+
+        <div class="row">
+            <div class="data">전체 선택자</div>
+            <div class="data">*</div>
+            <div class="data">*</div>
+        </div>
+
+        <div class="row">
+            <div class="data">태그 선택자</div>
+            <div class="data">태그</div>
+            <div class="data">h1</div>
+        </div>
+
+        <div class="row">
+            <div class="data">아이디 선택자</div>
+            <div class="data">#아이디</div>
+            <div class="data">#root</div>
+        </div>
+
+        <div class="row">
+            <div class="data">클래스 선택자</div>
+            <div class="data">.클래스</div>
+            <div class="data">.row</div>
+        </div>
+        
+        <div class="row">
+            <div class="data">자손 선택자</div>
+            <div class="data">선택자A > 선택자 B</div>
+            <div class="data">.row >  .data</div>
+        </div>
+        
+        <div class="row">
+            <div class="data">후손 선택자</div>
+            <div class="data">선택자A  선택자 B</div>
+            <div class="data">.row   .data</div>
+        </div>
+        
+        <div class="row">
+            <div class="data">속성 선택자</div>
+            <div class="data">선택자[속성 = '값']</div>
+            <div class="data">input [type="text"]</div>
+        </div>
+        
+        <div class="row">
+            <div class="data">속성 포함 선택자</div>
+            <div class="data">선택자[속성*= "값"]</div>
+            <div class="data">img[src *= "jpg"]</div>
+        </div>
+        
+        <div class="row">
+            <div class="data">속성 시작 선택자</div>
+            <div class="data">선택자[속성^= "값"]</div>
+            <div class="data">img[src ^= "danbi"]</div>
+        </div>
+        
+        <div class="row">
+            <div class="data">속성 종료 선택자</div>
+            <div class="data">선택자[속성$= "값"]</div>
+            <div class="data">img[src $= "danbi"]</div>
+        </div>
+        
+        <div class="row">
+            <div class="data">동위 선택자</div>
+            <div class="data">선택자A + 선택자B</div>
+            <div class="data">h1+h2, 바로다음요소</div>
+        </div>
+        
+        <div class="row">
+            <div class="data">동위 선택자</div>
+            <div class="data">선택자A ~ 선택자B</div>
+            <div class="data">h1~h2, 다음모든요소</div>
+        </div>
+        
+        <div class="row">
+            <div class="data">부정 선택자</div>
+            <div class="data">:not (선택자)</div>
+            <div class="data">input:not([type="checkbox"]])</div>
+        </div>
+    </div>
+<h1>02-selector2.html</h1>
+    <hr>
+
+    <fieldset>
+        <style>
+            img{
+                margin: 10px;
+            }
+            img[src $="png"]{        /* src속성이 png로 끝나는 요소*/
+                border: 2px solid red;
+            }
+            img[src$="jpg"]{         /* src속성이 jpg로 끝나는 요소*/
+                border: 2px solid green;
+            }
+            img[src^="image"]{      /* src속성이 image라는 단어로 시작하는 요소*/
+                border-radius: 10px;
+            }
+            img[src*="짱구"]{      /* */
+                box-shadow: 5px 5px 5px skyblue;
+            }
+        </style>
+
+            <img src="image/짱구.png" height="100">
+            <img src="image/유리.png" height="100">
+            <img src="image/danbi.jpg" height="100">
+            <img src="image/철수.png" height="100">
+            <img src="image/맹구.png" height="100">
+
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <style>
+            h2 ~ h3{            /* h2 와 동일한 레벨에 있는 이후 h3 모두에게 적용*/
+                font-size: 2em;
+            }
+            h2 + h3{            /* h2 바로 다음에 있는 동일한 레벨의 h3하나에게 적용*/
+                color: red;
+            }
+        </style>
+
+        <h3>Hello, world</h3>
+        <h2>Hello, World</h2>
+        <h3>Hello, world</h3>
+        <h3>Hello, world</h3>
+        <h3>Hello, world</h3>
+
+    </fieldset>
+    <hr>
+
+    <fieldset>
+        <style>
+            input:not([type="submit"]){
+                padding: 10px;
+            }
+            input[type="submit"]{
+                width: 193px;
+            }
+        </style>
+
+        <p><input type="text" name="id" placeholder="아이디"></p>
+        <p><input type="password" name="pw" placeholder="비밀번호"></p>
+        <p><input type="submit" name="로그인" placeholder="로그인"></p>
+
+    </fieldset>
+<h1>03-flex.html</h1>
+    <hr>
+
+    <fieldset>
+        <style>
+            .box {
+                display: flex;
+                justify-content: space-between;
+            }
+            .item {
+                width: 100px;
+                height: 100px;
+                background-image: url('image/danbi.jpg');
+                background-size: 100%;
+            }
+        </style>
+        <legend><b>space-between</b></legend>
+        <div class="box">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <style>
+            .box2 {
+                display: flex;
+                justify-content: space-between;
+                border: 3px dashed red;
+            }
+            .left, .right {
+                display: flex;
+                border: 3px dashed green;
+            }
+            .left > .item {
+                margin-right: 10px;
+            }
+            .right > .item {
+                margin-left: 10px;
+            }
+        </style>        
+        <div class="box2">
+            <div class="left">
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+            <div class="right">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </div>
+    </fieldset>
+    <br>
+
+
+    <fieldset>
+        <legend><b>wrap</b></legend>
+        <style>
+            #frame {
+                width: 600px;
+                display: flex;
+                flex-flow: wrap;
+                margin: auto;
+                /* justify-content: center; */
+            }
+            #frame > .item {
+                margin: 10px;
+                background-repeat: no-repeat;
+            }
+        </style>
+        <div id="root">
+            <div id="frame">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </div>
+
+    </fieldset>
+<h1>04-wrap.html</h1>
+    <hr>
+
+    <div id="root">
+        <div id="frame">
+            
+            <div class="item">
+                <div class="img">
+                    <img src="image/calmdownman.jpg" width="150px">
+                </div>
+                <div class="title">침착맨</div>
+            </div>
+
+            <div class="item">
+                <div class="img">
+                    <img src="image/danbi.jpg" width="150px">
+                </div>
+                <div class="title">단비</div>
+            </div>
+
+            <div class="item">
+                <div class="img">
+                    <img src="image/흰둥이.png" width="150px">
+                </div>
+                <div class="title">흰둥이</div>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img src="image/calmdownman.jpg" width="150px">
+                </div>
+                <div class="title">침착맨</div>
+            </div>
+
+            <div class="item">
+                <div class="img">
+                    <img src="image/danbi.jpg" width="150px">
+                </div>
+                <div class="title">단비</div>
+            </div>
+
+            <div class="item">
+                <div class="img">
+                    <img src="image/흰둥이.png" width="150px">
+                </div>
+                <div class="title">흰둥이</div>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img src="image/calmdownman.jpg" width="150px">
+                </div>
+                <div class="title">침착맨</div>
+            </div>
+
+            <div class="item">
+                <div class="img">
+                    <img src="image/danbi.jpg" width="150px">
+                </div>
+                <div class="title">단비</div>
+            </div>
+
+            <div class="item">
+                <div class="img">
+                    <img src="image/흰둥이.png" width="150px">
+                </div>
+                <div class="title">흰둥이</div>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img src="image/calmdownman.jpg" width="150px">
+                </div>
+                <div class="title">침착맨</div>
+            </div>
+
+            <div class="item">
+                <div class="img">
+                    <img src="image/danbi.jpg" width="150px">
+                </div>
+                <div class="title">단비</div>
+            </div>
+
+            <div class="item">
+                <div class="img">
+                    <img src="image/흰둥이.png" width="150px">
+                </div>
+                <div class="title">흰둥이</div>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img src="image/calmdownman.jpg" width="150px">
+                </div>
+                <div class="title">침착맨</div>
+            </div>
+
+            <div class="item">
+                <div class="img">
+                    <img src="image/danbi.jpg" width="150px">
+                </div>
+                <div class="title">단비</div>
+            </div>
+
+            <div class="item">
+                <div class="img">
+                    <img src="image/흰둥이.png" width="150px">
+                </div>
+                <div class="title">흰둥이</div>
+            </div>
+        </div>
+    </div>
+<div id="head frame">
+        
+        <ul>
+            <div id="lang">
+                <li>Language ▼</li>
+                <li>Banking ▼</li>
+            </div>
+        </ul>
+
+        <div class="phead" style="padding-left: 50px;">
+            <img src="image/NH로고.jpg" style="width: 50px;height: 50px; padding-top: 20px;">
+            <p><b>NH농협은행</b></p>
+        </div>
+
+
+        <ul class="headlist">
+            <li><b>은행안내</b></li>
+            <li><b>윤리경영</b></li>
+            <li><b>금융소비자보호</b></li>
+            <li><b>기업지배구조</b></li>
+            <li><b>경영정보</b></li>
+            <li><b>ESG경영</b></li>
+            <li><b>채영정보</b></li>
+            <li><b>홍보센터</b></li>
+            <li><b>☰</li>
+            </ul>
+            
+    </div>
+        
+        <hr>
+
+
+    <div id="main">
+        <ul class="mainlist">
+            <li style=""><b>사랑받는 일등 민족은행</b></li>
+            <li><b>농협인과 모두가 행복한 금융을 만들어 갑니다</b></li>
+        </ul>
+
+        <div class="box">
+            <p style="font-size: 25px; text-align: left;"><b>NH 뉴스</b></p>
+            <img src="https://www.nhbank.com/upload/nhnews/5937/imgpc_1.jpg">
+
+            <li>NH뉴스</li>
+            <li>NH농협은행, 펀드가입 이벤트</li>
+            <li>실시</li>
+            <li>NH농협은행, 펀드가입 이벤트 실시</li>
+            <li>2023-07-03</li>
+        </div>
+    </div>
+    <div id="foot"></div>
+<div id="top">
+        <div class="sb frame">
+            <ul>
+                <li>LOGIN</li>
+                <li>JOIN US</li>
+                <li>CART <span class="cartNumber">0</span></li>
+                <li>ORDER</li>
+                <li>MY PAGE</li>
+                <li>BOOKMARK</li>
+            </ul>
+    
+            <ul>
+                <li>공지사항</li>
+                <li>이벤트</li>
+                <li>상품문의</li>
+                <li>상품후기</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="logo">
+        <div id="title">
+            <h1>D'ARLES</h1>
+        </div>
+        <div class="sb frame">
+            <div class="icons">
+                <div class="icon">f</div>
+                <div class="icon">🎴</div>
+                <div class="icon">▶</div>
+            </div>
+            <div class="search">
+                <div class="input">
+                    <input type="text" autocomplete="off">
+                    🔍
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="nav">
+        <div class="frame">
+            <ul class="sb">
+                <li>≡</li>
+                <li>RONA Universe</li>
+                <li>남성의류</li>
+                <li>아우터</li>
+                <li>탑</li>
+                <li>드레스</li>
+                <li>바텀</li>
+                <li>악세사리</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div id="banner" class="frame"></div>
+
+    <div id="remocon">
+        <ul>
+            <li><</li>
+            <li>🔍</li>
+            <li>🚛</li>
+            <li>🛒</li>
+            <li>💖</li>
+            <li>🕘</li>
+            <li>🗨</li>
+            <li>
+                ∧<br>∨
+            </li>
+        </ul>
+    </div>
+    <div id="content" class="frame"></div>
+</body>
+</html>
