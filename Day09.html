@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        body {
+            background: url("캠핑.png") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .main {
+            opacity: 0.5;
+            background: rgba(255, 255, 255, 0.8);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            width: 550px;
+            height: 750px;
+        }
+
+        #sub {
+            padding-left: 25px;
+            display: flex;
+        }
+
+        #sub > p {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1 style="color: black;">로그인</h1>
+        <form method="POST">
+            <p><input type="text" name="userid" placeholder="아이디" required autofocus></p>
+            <p><input type="password" name="userpw" placeholder="Password" required></p>
+            <p><input type="checkbox" name="remember" required>아이디 저장</p>
+            <p><input type="submit" value="로그인" style="width: 200px;"></p>
+            <div id="sub">
+                <p><a href="cpath/findmyidpw"><button>ID/PW찾기</button></a></p>
+                <p><a href="cpath/findmyidpw"><button>회원가입</button></a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
