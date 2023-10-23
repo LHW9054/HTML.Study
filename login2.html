@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/main.css">
+</head>
+<body style="background: url('자연풍경.jpg') no-repeat center center fixed; background-size: cover;">
+    <div class="main">
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; text-align: center; border-radius: 10px; width: 350px; height: 350px; background: rgba(255, 255, 255, 0.8);">
+            <h1 style="color: black;">로그인</h1>
+            <form method="POST">
+                <p><input type="text" name="userid" placeholder="아이디" required autofocus class="other-elements" style="width: 200px; height: 30px;"></p>
+                <p><input type="password" name="userpw" placeholder="Password" required class="other-elements" style="width: 200px; height: 30px;"></p>
+                <p><input type="checkbox" name="remember" required class="other-elements">아이디 저장</p>
+                <p><input type="submit" value="로그인" id="login-button" style="width: 200px; height: 30px;"></p>
+            </form>
+            <div id="sub" class="other-elements">
+                <a href="cpath/findmyidpw"><button>ID/PW찾기</button></a>
+                <a href="cpath/findmyidpw"><button>회원가입</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
