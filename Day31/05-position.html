@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05-position.html</title>
+</head>
+<body>
+    
+    <h1>05-position.html</h1>
+    <hr>
+
+    <table border="1" cellpadding="10" cellspacing="0" align="center">
+
+        <tr>
+            <th>속성</th>
+            <th>기능</th>
+        </tr>
+        <tr>
+            <th>static</th>
+            <th>기본값, 별도의 위치를 지정하지 않고 흐름에 맞게 배치한다.</th>
+        </tr>
+        <tr>
+            <th>relative</th>
+            <th>다른요소의 위치 기준이 될수 있다. 흐름에 맞게 배치한다</th>
+        </tr>
+        <tr>
+            <th>absolute</th>
+            <th>기준을 중심으로 자신만의 위치를 가진다. 스크롤의 영향은 받는다</th>
+        </tr>
+        <tr>
+            <th>fixed</th>
+            <th>기준을 중심으로 자신만의 위치를 가진다. 스크롤의 영향을 받지 않는다</th>
+        </tr>
+        <tr>
+            <th>sticky</th>
+            <th>평소에는 relative처럼 배치되지만, 기준점에 도달하면 fixed와 같다</th>
+        </tr>
+    </table>
+
+    <fieldset>
+        <legend>static</legend>
+        <img src="image/danbi.jpg" 
+            style="top : 20px;
+                    left: 20px;
+                    position:static;"
+                height="100">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias veritatis quidem odio, quaerat assumenda hic reiciendis error minima est dolor voluptatum harum ratione praesentium corrupti perspiciatis numquam similique eum suscipit?
+    </fieldset>
+
+    <fieldset>
+        <legend>relative</legend>
+        <img src="image/danbi.jpg" 
+            style="top : 20px;
+                    left: 20px;
+                    position:relative;"
+                height="100">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias veritatis quidem odio, quaerat assumenda hic reiciendis error minima est dolor voluptatum harum ratione praesentium corrupti perspiciatis numquam similique eum suscipit?
+    </fieldset>
+    
+    <fieldset style="position: relative;">
+        <legend>absolute</legend>
+        <img src="image/danbi.jpg" 
+            style="top : 20px;
+                    left: 20px;
+                    position:absolute;"
+                height="100">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias veritatis quidem odio, quaerat assumenda hic reiciendis error minima est dolor voluptatum harum ratione praesentium corrupti perspiciatis numquam similique eum suscipit?
+        부모요소에 STATIC이 아닌 포지션값을 가지고 있으면은 해당 포지션으로 간다
+    </fieldset>
+
+    <fieldset style="position: relative;">
+        <legend>fixed</legend>
+        <img src="image/danbi.jpg" 
+            style="top : 20px;
+                    left: 20px;
+                    position:fixed;"
+                height="100">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias veritatis quidem odio, quaerat assumenda hic reiciendis error minima est dolor voluptatum harum ratione praesentium corrupti perspiciatis numquam similique eum suscipit?
+    </fieldset>
+
+    <fieldset style="position: relative;">
+        <legend>sticky</legend>
+        <img src="image/calmdownman.jpg" 
+            style="top : 400px;
+                    left: 300px;
+                    position:sticky;"
+                height="100">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias veritatis quidem odio, quaerat assumenda hic reiciendis error minima est dolor voluptatum harum ratione praesentium corrupti perspiciatis numquam similique eum suscipit?
+    </fieldset>
+
+    <div style="width: 90%; height: 95vh;"></div>
+
+
+</body>
+</html>
