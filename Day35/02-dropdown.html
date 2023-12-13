@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-dropdown.html</title>
+    <style>
+        a{
+            text-decoration: none;                  /*글자를 꾸미지 않는다*/
+            color: inherit;                         /*a태그에 색상을 입히지 않는다.*/
+        }
+        a:hover{
+            text-decoration: underline;             /*a에 마우스를 갖다대면 밑줄이 만들어진다*/
+        }
+        #nav > ul{
+            list-style: none;                       /*ul태그에는 스타일이 없다*/
+            padding-left: 0;                        /*왼쪽 패딩에 값을 0으로 한다*/
+            display: flex;                          /*화면을 가로로 정렬하겠다*/
+            /* justify-content: space-between; */
+            width: 800px;                           /*너비를 800px로 지정한다*/
+            margin: auto;                           /*정해진 넓이 에서 중앙을 맞춰준다*/ 
+        }
+        #nav > ul > li{                             /*Nav 클래스에 포함되어 있는 ul태그에 포함되어 있는 li태그들에게 적용된다.*/
+            border: 2px solid black;              /*요소 테두리를 2px두께로 검은색 일직선을 만들어 준다*/
+            flex: 1;                                /**/
+            padding: 10px;                          /*테두리와 안에 요소의 넓이를 상하좌우 10px로 한다*/
+            text-align: center;                     /*문자 위치를 center로 한다.*/
+            margin-right: -2px;                     /*오른쪽 마진에 -2px을 주어서 칸마다 사이에 있는 테두리의 두께를 줄여준다.*/
+            position: relative;                     /**/
+        }
+        #nav > ul > li:hover{
+            background-color: skyblue;
+            cursor: pointer;
+        }
+        ol{
+            list-style: none;
+            padding-left: 0;
+            display: none;
+            cursor: pointer;
+            position: absolute;
+            width: 138px;
+            box-sizing: border-box;
+            top: 41px;
+            left: -2px;
+        }
+        ol > li{
+            border: 2px solid black;
+            padding: 10px;
+            width: inherit;
+            margin-bottom: -2px;
+            
+        }
+        ul > li:hover > ol{
+            display: block;
+        }
+        ol > li:hover{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>02-dropdown.html</h1>
+    <hr>
+
+    <div id="nav">
+        <ul>
+            <li>
+                <a href="#">menu1</a>
+                <ol>
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                </ol>
+            </li>
+            
+            
+            
+            
+            
+            <li><a href="#">menu2</a>
+                <ol>
+                    <li><a href="#">submenu4</a></li>
+                    <li><a href="#">submenu5</a></li>
+                    <li><a href="#">submenu6</a></li>
+                </ol>
+            </li>
+            
+            <li><a href="#">menu3</a></li>
+            
+            <li><a href="#">menu4</a>
+                <ol>
+                    <li><a href="#">submenu7</a></li>
+                    <li><a href="#">submenu8</a></li>
+                    <li><a href="#">submenu9</a></li>
+                </ol>
+            </li>
+
+            <li><a href="#">menu5</a></li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

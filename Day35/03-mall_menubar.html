@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-mall_menubar.html</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: inherit;          
+        }
+        a > ol > a{
+            list-style: none;
+        }
+        ol{
+            list-style: none;
+            text-align: center;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        ol > li:hover{
+            background-color: pink;
+        }
+
+
+
+
+        #frame{
+            margin: 10px;
+            padding: 10px;
+        }
+        #head{
+            padding-left: 300px;
+            padding-right: 300px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        #head > ul{
+            display: flex;
+            list-style: none;
+            padding: 3px;
+            margin: 0;
+        }
+        #head > ul > li{
+            padding-right: 12px;
+        }
+        .img{
+            display: block;
+            margin: auto;
+        }
+        .logo{
+            margin: 20px;
+            padding: 30px;
+            font-size: 50px;
+            text-align: center;
+            font-weight: bold;
+        }
+        #menu{
+            border-top: 0.1px solid rgba(0, 0, 0, 0.1);
+            border-bottom: 0.1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            height: 50px;
+        }
+        #menu > ul{
+            padding-left: 500px;
+            list-style: none;
+            display: flex;
+            margin: auto;
+            font-size: 20px;
+            height: 30px;
+            flex: 1;
+        }
+        #menu > ul > li{
+            padding-right: 40px;
+        }
+        #menu > ul > li:nth-child(1){
+            font-size: 25px;
+            text-align: center;
+        }
+        #menu > ul > li:nth-child(2){
+            color: hotpink;
+        }
+    </style>
+</head>
+<body>
+   
+
+    <div id="head">
+        <ul>
+            <li>LOGIN</li>
+            <li>JOIN US</li>
+            <li>CART</li>
+            <li>ORDER</li>
+            <li><b>MYPAGE</b></li>
+            <li><b>BOOKMARK</b></li>
+        </ul>
+
+        <ul>
+            <li>공지사항</li>
+            <li>이벤트</li>
+            <li>상품문의</li>
+            <li>상품후기</li>
+        </ul>
+
+    </div>
+
+    <div id="main">
+        <p class="logo">
+            D'ARLES
+        </p>
+    </div>
+
+    <div id="menu">
+        <ul>
+            <li><b>☰</b></li>
+            <li>RONAuniverse</li>
+
+            <li>
+                <a href="#">남성의류</a>
+                <ol>
+                    <li><a href="#">아우터</a></li>
+                    <li><a href="#">탑</a></li>
+                    <li><a href="#">세트</a></li>
+                    <li><a href="#">바텀</a></li>
+                    <li><a href="#">악세서리</a></li>
+                </ol>
+            </li>
+
+
+            <li>아우터</li>
+            <li>탑</li>
+            <li>드레스</li>
+            <li>바텀</li>
+            <li>악세서리</li>
+        </ul>
+    </div>    
+
+    <img class="img"
+    src="https://darles.co.kr/web/upload/NNEditor/20210504/0bf1a699ea515735d0841f86daa11cc0.jpg">
+
+
+</body>
+</html>
